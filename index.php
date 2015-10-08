@@ -2,13 +2,43 @@
 /*Esto inicia un bloque de codigo en php*/
 $usr= $_GET['usuario'];
 $pass= $_GET['contraseña'];
-if($usr!='carlos' || $pass !="1234567" ) {
-		echo"Registrate";
+$loginok=false;/*Sirve para saber si el usuario y clave son validos o no. Sie es
+false quiere decir que el usuario o el password no son validos. Si es true,
+entonces el user y pass son permitidos*/
+$uservalidok=false;/*Sirve para saber si el usuario existe o no*/
+$passok=false;/*Sirve para saber si el password es correcto o no*/
+/*Lista de usuarios válidos*/
+$usuarios=array("rctorr","zuave","uriel","aura","monica","Perlis");
+$passwords=array("12357tor","123456ve","1234567I","12345678","12777897","55512343");
+/*Para acceder a un elemento del array se usa: $usuarios[0]->"rctorr"*/
+for($i=0; $i<=5; $i+=1 ){
+	/*Comprar la variable usr con cada elemento de la lista de usuarios*/
+	if ($usuarios[$i]==$usr){
+		/*Este bloque se ejecuta si la condicion es verdadera, y eso es cuando se
+		imgresa un usuario valido */
+			if($passwords[$i]==$pass){
+					$loginok=true;
+					$uservalidok=true;
+					$passok=true;
+					break;
+				}else{
+				$loginok=false;
+				$passok=false;
+				}
+			}else{
+			$loginok=false;
+			$uservalidok=false;
+		}
+
+}/*termina el for*/
+/*
+$loginok<-true cuando el user y pass son validos o correctos
+$loginok<-false cuando el usuario y/o el pass no son válidos
+*/
+if(!$loginok){
+	echo "lo siento no esta autorizado";
 }
-else {
-
-
-
+else{
 /*Esto termina un bloque de codigo php*/
 ?>
 <!DOCTYPE html>
@@ -36,7 +66,7 @@ else {
 				 <article>
 							<p> Bienvenido </p>
 							<?php
-							echo $usr; 
+							echo $usr;
 							 ?>
 				</article>
 			</div> <!-- termina mensaje-->
@@ -50,5 +80,5 @@ else {
 </body>
 </html>
 <?php
-}/*Termina bloque autorizado
+}/*Termina bloque autorizado*/
 ?>

@@ -23,10 +23,13 @@
 	           <form action="index.php" method="GET" >
                     <h1>Login</h1>
                       <!-- recuadros txt-->
-		          <input type="text" placeholder="Escribe tu suario" name="usuario" required />
-		          <input type="password" placeholder="Escribe tu contraseña " name="contraseña" required/>
-		              <!-- botones-->
-		          <button type="submit" ><h2>Ingresar</h2></button>
+		          <input  type="text" placeholder="Escribe tu suario" name="usuario" required  />
+		          <input id="pass" type="password" placeholder="Escribe tu contraseña " name="contraseña" required onkeyup="valida()"/>
+              <div id=msj>
+              </div>
+                  <!-- botones-->
+		          <button id="ingresar" type="submit" ><h2>Ingresar</h2></button>
+
 
 	           </form>
 
@@ -34,6 +37,34 @@
         <footer> <!-- pie de pagina-->
             <p>Copyleft: TDW2.0</p>
         </footer>
-        </div>
+      </div>
+        <script>
+        /*Codigo de javascript para validar la longitud del campo password*/
+        function valida(){
+          /*Realiza la accion de validar*/
+
+          var pass=document.getElementById('pass').value;/* pass equivalente al campo
+          input del password html*/
+        /*long sera la longitud del password escrito por el
+          usuario*/
+          var long = pass.length;
+          var input = document.getElementById('pass');
+          var ingresar = document.getElementById('ingresar');
+          var mensaje= document.getElementById('msj');
+
+
+
+          if (long >= 8){
+            input.style.backgroundColor="#00ff00";
+            ingresar.disabled=false;
+            mensaje.innerHTML="";
+          }else{
+            input.style.backgroundColor="#ff9999";
+            ingresar.disabled=true;
+            mensaje.innerHTML="La contraseña debe tener almenos 8 caracteres";
+          }
+          //alert(pass.length);
+        }
+        </script>
     </body>
 </html>
