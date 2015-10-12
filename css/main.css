@@ -250,8 +250,122 @@ article {
         box-shadow: 3px 3px 12px #e3e2e2;	
     
 }
+/*//////////////////////////////////////////////////////////////////
+                    termina usuario_no existe.html
+//////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////
+                    inicia login-registro.html
+//////////////////////////////////////////////////////////////////*/
 
-   
+.form h2, .form label {
+    font-family: "Helvetica";
+}
+
+.requeridos, .sub {
+    font-size: 11px;
+}
+
+.form ul {
+    width: 750px;
+    list-style-type:none;
+    margin: 0px;
+    padding: 20px;
+}
+
+.form li {
+    padding: 20px;
+}
+
+.form h2 {
+    margin: 0px;
+    display: inline;
+}
+
+.sub {
+    color: #d45252;
+    margin: 0px;
+    display: inline;
+    float: right;
+}
+
+.form label {
+    margin-left: 120px;
+    width: 160px;
+    float: left;
+    padding: 3px;
+}
+
+.form input {
+    height: 20px;
+    width: 200px;
+    padding: 5px 8px;
+}
+.form button {
+    margin-left: 330px;
+}
+
+.form input{
+    border: 2px solid #aaa6a6;
+    box-shadow: 3px 3px 6px #ccc, 0 10px 15px #eee inset;
+    border-radius: 5px;
+    -moz-transition: padding .25s;
+    -webkit-transition: padding .25s;
+    -o-transition: padding .25s;
+    transition: padding .25s;
+}
+
+.requeridos {
+    background: #ff0000;
+    border-radius: 13px 13px 13px 13px;
+    color: white;
+    margin-left: 10px;
+    padding: 3px 6px;
+    position: absolute;
+    display: none;
+}
+
+    .requeridos:after {
+        color: #d45252;        
+    }
+
+#registro{
+    background-color: #fff;
+    width: 40%;
+    padding: 1%;
+    margin: 7% auto;
+    border: 3px solid #ff6200;
+    border-radius: 8px;
+    box-shadow:inset  0px 0px 10px #000;
+
+    }
+
+ #titulo{
+     font-family: Helvetica;
+     color: black;
+     text-align:  center;
+     font-size: 250%;
+}
+.texto{
+    font-family: Helvetica;
+    color: aliceblue;
+    text-align: left;
+    font-size: 50%;
+    
+}
+
+
+li {
+    font-family: Helvetica;
+    font-size: 13px;
+    color: #6d6d6d;
+    padding: 1% 2%;
+    
+}
+
+/*//////////////////////////////////////////////////////////////////
+                    termina login-registro.html
+//////////////////////////////////////////////////////////////////*/
+
 /*////////////////--   pie de pagina ---//////////////////////////*/
 footer {
     background-color: #6d6d6d;
