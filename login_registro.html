@@ -1,19 +1,34 @@
 <!DOCTYPE html>
-<html lang="es">
+<html> 
 <head>
-    <meta charset="UTF-8">
-    <title>Formulario</title>
-    <link href="main.css" rel="stylesheet" /> 
+    <title>login</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/main.css" />
 </head>
-<body> 
-    <div><form class="form" action="#" id="form"> 
+
+    <body>
+    <header> <!-- encabezado 
+        -->
+                <aside> <span class="naranja">Mi primer login</span> </aside>
+                <nav>
+                    <a class="activo" href="index.html">Inicio</a>
+                    |   
+                    <a href=" ">Ingresar</a>
+                    |
+                    <a href="login_registro.html">Nuevo usuario</a>
+                </nav>
+    </header>
+
+        <div id="contenedor"><!-- cuadro de login-->
+            
+        <div><form action="#" id="registro"> 
             <ul> 
-                <li> 
-                    <h2>Registra tu cuenta</h2> 
+                <li class="texto"> 
+                    <h1 id="titulo">Registra tu cuenta</h1> 
                     <span class="sub">* Datos requeridos</span> 
                 </li> 
                 <li> <label for="name">Nombre:</label> 
-                <input type="text" placeholder="Daniel lopez" required /> 
+                <input type="text" placeholder="Nombre" required /> 
                 </li> 
                 
                 <li> <label for="date">Fecha de nacimiento:</label> 
@@ -37,12 +52,17 @@
                 <li> <label for="repass">Confirma tu contraseña:</label> 
                 <input type="password" required /> 
                 </li>  
-                <li> 
-                <button class="submit" type="submit">Registrar</button> 
-                </li> 
-            </ul> 
+               
+            </ul>
+            <button class="submit" type="submit">Registrar</button>  
         </div> 
+   
     </form>
-</body> 
 
+        <footer> <!-- pie de pagina-->
+            <p><a href="login_registro.html"> Registro </a> Adios </p>
+        </footer>
+        </div>
+    </body>
 </html>
+
